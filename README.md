@@ -73,13 +73,11 @@
 4. “漂流瓶”页面中的图片为展示图片（用户可以在个人中心->设置中修改）
 5. “漂流瓶”页面右下方的句子来自每日一句api，用户可以自行修改
 
-![](./漂流瓶页面.png)
 
 ### 2.1.3 个人中心页面
 
 顾名思义即用于用户查看、修改个人信息的界面。可以查看自己收到的赞数以及是否有新的回复。此外还可通过点击按钮查看手账界面填写的最近一周/一月的心情总结；通过设置修改漂流瓶界面的图片；申请获得邀请码以及通过邀请码成为管理员；管理员用户还可以查看他人发送的管理员信件并回复、快捷获得邀请码以发送给申请者；此外还可以查看使用指南以及反馈问题。
 
-![](./个人中心.png)
 
 ## 2.2 交互设计
 
@@ -90,7 +88,6 @@
 - 用户在手账弹窗中，通过长按之前撰写的手账片段对写过的手账片段进行修改
 - 用户在手账弹窗中，通过左滑或右滑之前撰写过的手账片段，滑出框外一定时间（1.5s)，来对写过的手账片段进行删除
 
-<img src="/Users/taozehua/Library/Containers/com.tencent.qq/Data/Library/Caches/Images/62BDEBEE5B86FF19B61DC5FEB808F26B.jpg" alt="62BDEBEE5B86FF19B61DC5FEB808F26B" style="zoom:20%;" /><img src="/Users/taozehua/Library/Containers/com.tencent.qq/Data/Library/Caches/Images/CFBB89717267003481CB0B9A1CC79F24.jpg" alt="CFBB89717267003481CB0B9A1CC79F24" style="zoom:20%;" />
 
 ### 2.2.1 漂流瓶
 
@@ -98,7 +95,6 @@
 - 用户点击漂流瓶图标，可以发布实名漂流瓶
 - 用户点击打捞漂流瓶图标，可以打捞漂流瓶并选择回复/丢弃
 
-<img src="/Users/taozehua/Library/Containers/com.tencent.qq/Data/Library/Caches/Images/50D3EE3B48BC0C635B20C3E802852D2D.jpg" alt="50D3EE3B48BC0C635B20C3E802852D2D" style="zoom:29%;" />
 
 ### 2.2.3 个人中心
 
@@ -109,7 +105,6 @@
 - 用户可以点击使用指南来查看本小程序使用说明
 - 用户可以点击设置来自定义漂流瓶页面的图片
 
-<img src="/Users/taozehua/Library/Containers/com.tencent.qq/Data/Library/Caches/Images/2584BFE205325E522E0891E1C1FEA942.jpg" alt="2584BFE205325E522E0891E1C1FEA942" style="zoom:20%;" />
 
 # 3.关键技术
 
