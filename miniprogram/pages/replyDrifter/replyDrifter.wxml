@@ -1,0 +1,9 @@
+<!--pages/replyDrifter/replyDrifter.wxml-->
+<van-cell-group wx:for="{{random}}">
+   <van-cell title="{{item.content}}" is-link bindtap="jumpToReplyRandom" data-item="{{item}}" size="large" value="随机漂流瓶" />
+</van-cell-group>
+
+
+<van-cell-group wx:for="{{orientingContent}}">
+   <van-cell title="{{item.content}}" is-link bindtap="jumpToReplyOrienting" data-item="{{item}}" size="large" value="定向漂流瓶" />
+</van-cell-group>

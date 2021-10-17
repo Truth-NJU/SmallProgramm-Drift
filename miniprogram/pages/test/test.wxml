@@ -1,0 +1,2 @@
+<!--miniprogram/pages/test/test.wxml-->
+<buble animation="{{myanimation}}"></buble>

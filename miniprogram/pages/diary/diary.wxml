@@ -1,0 +1,23 @@
+<view class="dairy">
+  <view class="calender">
+    <view class="calender-title">
+      {{title}}
+    </view>
+    <view class="calender-week">
+      <view class="calender-week-item" wx:for="{{daysInWeek}}" wx:key="index">
+        <text>{{item}}</text>
+      </view>
+    </view>
+    <view class="calender-day">
+      <view class="calender-day-item" wx:for="{{daysOnShow}}" hover-class="{{item.isEnable===true?'hover':'none'}}"
+        hover-stay-time="80" style="{{item.isEnable===true?'':'pointer-events:none'}}" bindtap="openDetail"
+        data-day="{{item.day}}" wx:key="index">
+        <image class="calender-day-emotion" src="{{emotion[item.day]}}" data-day="{{item.day}}"></image>
+        <text data-day="{{item.day}}">{{item.day}}</text>
+      </view>
+    </view>
+  </view>
+  <popup id="popup" contents="{{popupContents}}" bind:onButton="updateContents" bind:deleteItem="deleteContents"
+    bind:getLeft="saveLeft" bind:longPress="dealLongPress"></popup>
+  <buble id="buble" class="buble" bind:bubleClick="bubleClick" bubles="{{bubles}}"></buble>
+</view>

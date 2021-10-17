@@ -1,0 +1,20 @@
+<!--pages/reply/reply.wxml-->
+
+<view>
+  <view class="arrowContent"></view>
+  <text class="content" style="width:max-content;max-width:70%">{{content}}</text>
+</view>
+<view wx:for="{{fileID}}" wx:key="index" hidden="{{hideImg}}">
+    <view class="arrowImg"></view>
+    <image src="{{item}}" class="img" mode='widthFix'></image>
+  </view>
+
+<view wx:for="{{reply}}"  >
+  <view class="arrow"></view>
+  <text class="replyText" style="width:max-content;max-width:80%">{{item.content}}</text>
+  <image src="../../images/zan.png"  wx:if="{{!item.like}}" class="zan" bindtap="like" data-item="{{item}}"></image>
+  <image src="../../images/zan-2.png"  wx:if="{{item.like}}" class="zan" bindtap="like" data-item="{{item}}"></image>
+  <view style='width: 100%; height: 90rpx;'></view>
+  <view style="postion:relative; float:right;">来自{{item.nickName}}</view>
+</view>
+

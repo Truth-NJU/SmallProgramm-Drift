@@ -1,0 +1,223 @@
+/*使屏幕变暗  */
+.background_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+
+/*对话框 */
+.popup-box {
+  border-top-right-radius: 5%;
+  border-top-left-radius: 5%;
+  width: 100%;
+  height: 60%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  /*background: linear-gradient(rgb(147, 208, 218), rgb(116, 84, 138));*/
+  background: linear-gradient(rgb(244, 223, 198), rgb(243, 208, 164));
+  /*background: hsla(0,0%,100%,.3); */
+  /*backdrop-filter: blur(20px);*/
+  z-index: 2000;
+}
+
+.popup-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  border-top-right-radius: 5vw;
+  border-top-left-radius: 5vw;
+}
+
+
+.popup-title {
+  flex-basis: 14%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*z-index: 2500;*/
+  font-size: 4.4vh;
+  color: #6f60aa;
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex-basis: 86%;
+  flex-grow: 1;
+  /*z-index: 2500;*/
+}
+
+.popup-content-scroll {
+  position: relative;
+  top: 0;
+  display: flex;
+  /*height: 34vh;*/
+  width: 80%;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  /*border: thin solid springgreen;*/
+}
+
+.scroll-background {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 90%;
+  opacity: 0.8;
+}
+
+.popup-content-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 5%;
+  width: 100%;
+  height: fit-content;
+  flex-grow: 1;
+  /*border: thin solid yellow;*/
+}
+
+.popup-content-item {
+  width: 60%;
+  height: 100%;
+  /*border: thin solid springgreen;*/
+  position: relative;
+}
+
+.item {
+  height: fit-content;
+  position: absolute;
+  left: 17px;
+  top: 1px;
+  margin: auto;
+  font-size: 16px;
+  word-break: break-all;
+  z-index: 3000;
+}
+
+
+.background {
+  width: 100%;
+  height: 100%;
+  /*border: thin solid green;*/
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*.popup-input {
+  bottom: 1.85vh;
+  position: absolute;
+  left: 3.6vw;
+  margin-right: 1.1vw;
+  min-height: 6.3vh;
+  line-height: 3.465vh;
+  font-size: 3.15vh;
+  padding: 1.4175vh 1.575vh 1.4175vh 1.575vh;
+  width: 76.3vw;
+  border-radius: 3.15vh 3.15vh 3.15vh 3.15vh/ 3.15vh 3.15vh 3.15vh 3.15vh;
+  background-color: #FFFFFF;
+}
+
+.input {
+  width: 100%;
+  height: 10vh;
+  position: absolute;
+  bottom: 0;
+}
+
+.popup-button {
+  position: fixed;
+  left: 81vw;
+  bottom: 1.85vh;
+  writing-mode: vertical-lr;
+  height: 5.922vh !important;
+  width: 15.2vw !important;
+  margin-right: 3.6vw !important;
+  border-radius: 3.15vh 3.15vh 3.15vh 3.15vh / 3.15vh 3.15vh 3.15vh 3.15vh;
+  background-color: #00CAFC;
+  color: #FFFFFF !important;
+  font-size: 1.974vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}*/
+
+.popup-button-hover {
+  background-color: #00B5E2;
+}
+
+
+
+.input-ex {
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  bottom: 0;
+  background-color: #EAEDF4;
+  /*padding: 1.85vh 3.6vw 1.85vh 3.6vw;
+  border: thin solid yellow;*/
+}
+
+.popup-input-ex {
+  line-height: 4vh;
+  font-size: 3vh;
+}
+
+.popup-button-ex {
+  position: fixed;
+  left: 81vw;
+  bottom: 1.85vh;
+  writing-mode: vertical-lr;
+  height: 5.922vh !important;
+  width: 15.2vw !important;
+  margin-right: 3.6vw !important;
+  border-radius: 3.15vh 3.15vh 3.15vh 3.15vh / 3.15vh 3.15vh 3.15vh 3.15vh;
+  background-color: #00CAFC;
+  color: #FFFFFF;
+  font-size: 2.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content-ex {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex-basis: 50vh;
+  flex-grow: 1;
+}
+
+.popup-background-ex {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-top-right-radius: 5%;
+  border-top-left-radius: 5%;
+}
+
+.popup-content-scroll-ex {
+  position: relative;
+  top: 4vh;
+  width: 100%;
+}

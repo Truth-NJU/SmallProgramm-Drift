@@ -1,0 +1,40 @@
+<!--pages/replyRandomDrifter/replyRandomDrifter.wxml-->
+
+<wxs module="compare" src="../../util/compare.wxs"></wxs>
+
+
+<view>
+  <view class="arrowContent"></view>
+  <text class="content"  style="width:max-content;max-width:70%">{{content}}</text>
+</view>
+<view>来自{{nickName}}</view>
+  <view wx:for="{{fileIDs}}" wx:key="index" hidden="{{hideImg}}">
+    <view class="arrowImg"></view>
+    <image src="{{item}}" class="img" mode='widthFix'></image>
+    <view>来自{{nickName}}</view>
+  </view>
+
+
+
+
+<view wx:for="{{reply}}"  wx:key="index" hidden='{{ifhidden}}'>
+  <view class="arrow"></view>
+  <text class="replyText" style="width:max-content;max-width:80%">{{item.content}}</text>
+  <view style='width: 100%; height: 15px;'></view>
+</view>
+
+<text>
+  \n\n\n
+</text>
+<view style='width: 100%; height: 20rpx;'></view>
+
+<view>
+  <van-field model:value="{{text}}" custom-style="border:thin solid #1296db;min-height:5%;width:75%;position:fixed;left:5%;bottom:2%;max-height:25%;border-radius: 50rpx;"
+  placeholder="请输入回复" 
+  auto-focus="true"
+  type="textarea"
+  autosize="true">
+  </van-field>
+  <button bindtap="send" class="button">发送</button>
+</view>
+<!-- <van-button type="primary" bindtap="back">完成</van-button> -->

@@ -1,0 +1,11 @@
+/* pages/introduction/introduction.wxss */
+
+page{
+  background-color: aliceblue;
+}
+
+.img{
+  position:relative;
+  width:500rpx;
+  left:130rpx;
+}

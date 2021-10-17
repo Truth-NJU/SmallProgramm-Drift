@@ -1,0 +1,8 @@
+{
+  "usingComponents": {},
+  "navigationBarBackgroundColor": "#1296db",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "详细回复",
+  "enablePullDownRefresh":false,
+  "backgroundTextStyle": "dark"
+}

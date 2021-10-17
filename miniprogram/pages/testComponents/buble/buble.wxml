@@ -1,0 +1,11 @@
+<!--miniprogram/pages/testComponents/buble/buble.wxml-->
+<view>
+  <button class="circle" size="mini" style="height:100rpx;width:100rpx;">
+    <image src="../../../images/细胞核.jpg"></image>
+    <view id="main">我是猪</view>
+  </button>
+  <button id="one" size="mini" style="height:75rpx;width:75rpx;"></button>
+  <button id="two" size="mini" style="height:75rpx;width:75rpx;"></button>
+  <button id="three" size="mini" style="height:75rpx;width:75rpx;"></button>
+</view>
+

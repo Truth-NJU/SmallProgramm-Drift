@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-circle": "@vant/weapp/circle/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-icon": "@vant/weapp/icon/index"
+  },
+  "navigationBarBackgroundColor": "#1296db",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "心情周报",
+  "enablePullDownRefresh":false,
+  "backgroundTextStyle": "dark"
+}

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "popup":"../../../components/popup/popup",
+    "buble":"../../components/buble/buble"
+  },
+  "navigationBarBackgroundColor": "#1296db",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "手帐"
+}

@@ -1,0 +1,221 @@
+<view class="people">
+  <view style="display:flex">
+    <view class="avatar">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view>
+      <open-data type="userNickName" class="name"></open-data>
+      <view class="identity" style="width:{{iwidth}}rpx"><text class="id_data">{{id_data}}</text></view>
+    </view>
+  </view>
+  <view class="show">
+    <view class="show_out">
+      <view class="show_in">
+        <view class="num">
+          {{like_num}}
+        </view>
+        <view class="num">收到的赞</view>
+      </view>
+    </view>
+    <view class="show_out">
+      <view class="show_in" bindtap="reply_page">
+        <view class="num">
+          {{reply_num}}
+        </view>
+        <view class="num">新的回复</view>
+      </view>
+    </view>
+  </view>
+  <image src="cloud://cloud1-9gych8ln2673033b.636c-cloud1-9gych8ln2673033b-1305508347/images/wave.gif"
+    mode="scaleToFill" class="gif-black" style="width:100%;height:75rpx"></image>
+</view>
+
+<view class="top {{show_reply?'top_show':''}}">
+  <view class="nav">
+    <view style="display:flex">
+      <image src="../../images/back.png" style="width:60rpx;height:60rpx" bindtap="reply_page" />
+      <view style="margin-left:165rpx" class="re {{page==0?'on':''}}" bindtap="test">漂流瓶</view>
+      <view class="re {{page==1?'on':''}}" bindtap="test">管理员</view>
+    </view>
+  </view>
+
+  <swiper current="{{page}}" bindchange="swiper_change" style="height:100%">
+    <swiper-item class="swiper">
+      <scroll-view scroll-y="true" style="height:100%">
+        <van-cell-group wx:for="{{random}}" wx:key="key">
+          <van-cell title="{{item.content}}" is-link bindtap="jumpToReplyRandom" data-item="{{item}}" size="large"
+            value="{{item.singleReply}}" icon="chat-o" />
+        </van-cell-group>
+      </scroll-view>
+    </swiper-item>
+
+    <swiper-item class="swiper">
+      <scroll-view scroll-y="true" style="height:100%">
+        <van-cell-group wx:for="{{orienting}}" wx:key="key">
+          <van-cell title="{{item.content}}" is-link bindtap="jumpToReplyOrienting" data-item="{{item}}" size="large"
+            value="{{item.singleReply}}" icon="chat-o" />
+        </van-cell-group>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>
+
+
+<view style="display:flex;justify-content: center;">
+  <view class="back" style="display:flex;">
+    <view class="manager_out" bindtap="be_manager">
+      <!-- <image class="img" src="../../images/back.png"></image> -->
+      <van-icon
+        name="https://636c-cloud1-9gych8ln2673033b-1305508347.tcb.qcloud.la/icon/guanliyuanrenzheng.png?sign=c2e50961ca4fbf262e77190961e9320d&t=1622127895"
+        custom-class="img"></van-icon>
+      <view style="margin-left:10rpx;">
+        <view>我要成为管理员</view>
+        <view class="manager_text">点击输入邀请码</view>
+      </view>
+    </view>
+    <view wx:if="{{identity===1}}" class="manager_out" bindtap="replyOrienting">
+      <van-icon
+        name="https://636c-cloud1-9gych8ln2673033b-1305508347.tcb.qcloud.la/icon/xinxiang.png?sign=54804290c4e7ec78cc05e73f36f6c456&t=1622128059"
+        custom-class="img"></van-icon>
+      <view style="margin-left:10rpx">
+        <view>管理员信箱</view>
+        <view class="manager_text">查看收到的信件</view>
+      </view>
+    </view>
+    <view wx:else class="manager_out" bindtap="to_get_code">
+      <van-icon
+        name="https://636c-cloud1-9gych8ln2673033b-1305508347.tcb.qcloud.la/icon/tubiao_lianmeng-yaoqingma.png?sign=1314532e2efd68600d59f9d0959b270f&t=1622127568"
+        custom-class="img"></van-icon>
+      <view style="margin-left:10rpx">
+        <view>获得邀请码</view>
+        <view class="manager_text">点击申请邀请码</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+<view class="cu-modal {{manager?'show':''}}">
+  <view class="out">
+    <view class="manager_content">
+      <view class="right">
+        <view class="action" bindtap="manager_back">
+          <image src="../../images/close_czw.png" style="width:50rpx;height:50rpx"></image>
+        </view>
+      </view>
+      <view wx:if="{{identity===0}}" style="padding:10rpx">
+        <text>请输入管理员邀请码</text>
+        <input class='code' placeholder="请输入邀请码" model:value="{{code}}"></input>
+        <button formType="submit" type='primary' style="margin-top:10rpx" bindtap="apply_for_manager">点击提交</button>
+      </view>
+      <view wx:else>
+        <image src="../../images/mokuro.png" style="width: 600rpx; height: 260rpx"></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<view class="cu-modal {{get_code?'show':''}}">
+  <view class="out">
+    <view class="get_code_content">
+      <view class="right">
+        <view class="action" bindtap="get_code_back">
+          <image src="../../images/close_czw.png" style="width:50rpx;height:50rpx"></image>
+        </view>
+      </view>
+      <view style="padding:10rpx">
+        <form bindsubmit='apply_for_manager' style="margin-top:10rpx">
+          <text>管理员会根据您的获赞数等因素评判您是否能够胜任管理员职务，并会以管理员信件的形式通知。每天只能申请一次。此外邀请码可能失效，若失效情再次申请</text>
+          <button type='primary' style="margin-top:30rpx" bindtap="get_code">申请</button>
+        </form>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view style="display:flex;justify-content: center;">
+  <view class="back">
+    <van-cell title="心情周报" custom-class="show_details show_top" title-class="title_left" bindtap="show_emoWeek" is-link>
+      <view slot="icon">
+        <van-icon
+          name="https://636c-cloud1-9gych8ln2673033b-1305508347.tcb.qcloud.la/icon/zhoubao.png?sign=48e59f1f7c8bbbf9f15ed3034b223947&t=1622126322">
+        </van-icon>
+      </view>
+    </van-cell>
+    <van-cell wx:if="{{identity===1}}" title="获得邀请码" custom-class="show_details" title-class="title_left" is-link
+      bindtap="manager_get_code">
+      <view slot="icon">
+        <van-icon
+          name="https://636c-cloud1-9gych8ln2673033b-1305508347.tcb.qcloud.la/icon/tubiao_lianmeng-yaoqingma.png?sign=1314532e2efd68600d59f9d0959b270f&t=1622127568">
+        </van-icon>
+      </view>
+    </van-cell>
+    <van-cell title="使用指南" custom-class="show_details" title-class="title_left" is-link bindtap="gotoIntroduction"> 
+      <view slot="icon">
+        <van-icon
+          name="https://636c-cloud1-9gych8ln2673033b-1305508347.tcb.qcloud.la/icon/shiyongzhinan.png?sign=6a4307be5a4d6c690876c118ca9576f9&t=1622127662">
+        </van-icon>
+      </view>
+    </van-cell>
+    <van-cell title="设置" custom-class="show_details" title-class="title_left" is-link bindtap="show_config">
+      <view slot="icon">
+        <van-icon
+          name="https://636c-cloud1-9gych8ln2673033b-1305508347.tcb.qcloud.la/icon/shezhi.png?sign=c3573bddb1f7801ccbd1b90835941565&t=1622128735">
+        </van-icon>
+      </view>
+    </van-cell>
+    <van-cell title="反馈与建议" custom-class="show_details show_top" title-class="title_left" is-link bindtap="advice">
+      <view slot="icon">
+        <van-icon
+          name="https://636c-cloud1-9gych8ln2673033b-1305508347.tcb.qcloud.la/icon/tousujianyi.png?sign=b5f2d5e1d5e9947ad5bd89cf9489fc9e&t=1622127759">
+        </van-icon>
+      </view>
+    </van-cell>
+  </view>
+</view>
+
+
+
+<view class="cu-modal {{if_manager_get_code?'show':''}}">
+  <view class="out">
+    <view class="manager_get_code_content">
+      <view class="right">
+        <view class="action" bindtap="manager_get_code_back">
+          <image src="../../images/close_czw.png" style="width:50rpx;height:50rpx"></image>
+        </view>
+      </view>
+      <text
+        style="display: flex; justify-content: center; margin-top: 10rpx; font-size: 50rpx; height: 60rpx; ">{{code}}</text>
+      <button type="primary" bindtap="copy" style="margin-top:30rpx">点击复制</button>
+    </view>
+  </view>
+</view>
+
+<view class="cu-modal {{show_advice?'show':''}}">
+  <view class="out">
+    <view class="advice_content">
+      <view class="right">
+        <view class="action" bindtap="advice_back">
+          <image src="../../images/close_czw.png" style="width:50rpx;height:50rpx"></image>
+        </view>
+      </view>
+      <view style="height:80%;">
+        <text style="font-size:40rpx">任何建议或者问题可联系2524658608@qq.com</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="top {{show_config?'top_show':''}}">
+  <!-- <view style="border-bottom:3rpx solid skyblue"> -->
+  <view class="nav" style="background-color:white;border-bottom:1rp,solid,grey">
+    <view style="display:flex;">
+      <image src="../../images/back.png" style="width:60rpx;height:60rpx" bindtap="show_config_back" />
+      <text class="re" style="font-weight:normal;font-size:medium;margin-left:240rpx">设置</text>
+    </view>
+  </view>
+  <van-cell title="修改图片" value="点击修改" size="large" label="修改漂流瓶界面的图片" bindtap="changeImg" />
+  <van-cell title="恢复默认" value="点击恢复" size="large" label="将漂流瓶界面的图片恢复默认" bindtap="defaultImg" />
+</view>

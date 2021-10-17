@@ -1,0 +1,56 @@
+<view class="root">
+   <van-icon
+      name="https://636c-cloud1-9gych8ln2673033b-1305508347.tcb.qcloud.la/yuwang.png?sign=8c3d46c452c8c2b2a8df3334ecb6c016&t=1622006880"
+      size="130rpx" custom-class="dalao" bindtap="dalao"></van-icon>
+   <van-icon
+      name="https://636c-cloud1-9gych8ln2673033b-1305508347.tcb.qcloud.la/piaoliuping.png?sign=6225eb420ebb7c5cae50676ba1e4aea0&t=1622006895"
+      size="100rpx" custom-class="create" bindtap="createDrifter" />
+
+   <view class="border">
+      <image src="{{imgSrc}}" class="image" bindload="getImgDetail" style="{{imgStyle}}"></image>
+   </view>
+   <image src="../../images/74c73667a0a4abf63d743f2a07f6a7ec.png" class="img" mode="widthFix"></image>
+
+   <!-- <image src="../../images/quxinxiang.png" class="mail" mode="widthFix" bindtap="createOrienting"></image> -->
+
+   <image
+      src="https://636c-cloud1-9gych8ln2673033b-1305508347.tcb.qcloud.la/-huifu.png?sign=4b0fb4ef87244cfe20100740748519b3&t=1622006904"
+      class="reply" mode="widthFix" bindtap="toMyReply"></image>
+
+
+   <van-popup show="{{show}}" round position="bottom" class="drift-popup" custom-style="height: 40%"
+      bind:close="onClose">
+      <van-picker show-toolbar title="请选择类型" class="toolbar-class" columns="{{ columns }}" bind:cancel="onCancel"
+         bind:confirm="onConfirm" />
+   </van-popup>
+
+   <van-popup show="{{ showOverlay }}" position="bottom">
+      <van-panel title="漂流瓶内容:" desc="请选择回复/丢弃">
+         <view class="card">
+            <view class="overlay">{{text}}</view>
+            <view wx:for="{{fileIDs}}" wx:key="index">
+               <image src="{{item}}" style="width:400rpx;" mode='widthFix'></image>
+            </view>
+         </view>
+      </van-panel>
+      <van-panel title="请选择回复/丢弃">
+         <van-button
+            icon="https://636c-cloud1-9gych8ln2673033b-1305508347.tcb.qcloud.la/-huifu.png?sign=09cc05d60ed66fe069b4b460e7336195&t=1621940099"
+            size="normal" bindtap="reply" round="true">回复</van-button>
+         <van-button
+            icon="https://636c-cloud1-9gych8ln2673033b-1305508347.tcb.qcloud.la/diudiao.png?sign=6dcbbd4bb7d7eac3abaca159a8bfc22f&t=1621939984"
+            size="normal" bindtap="giveup" round="true">丢弃</van-button>
+      </van-panel>
+   </van-popup>
+
+   <view class="bang">
+      <image class="qi" src="../../images/qipao.png" mode="widthFix"></image>
+      <textarea class="textfield" name="userName" placeholder="{{dailyWord}}" maxlength="18" ></textarea>
+   </view>
+
+
+
+<image src="https://636c-cloud1-9gych8ln2673033b-1305508347.tcb.qcloud.la/icon/%E6%89%8B%E7%BB%98%E5%8D%A1%E9%80%9A%E5%8F%AF%E7%88%B1%E5%A4%9A%E5%95%A6A%E6%A2%A6.png?sign=6d7332e853caac59d0c02dcc3f5e95b5&t=1622028665" class="ren" mode="widthFix"></image>
+
+
+</view>  

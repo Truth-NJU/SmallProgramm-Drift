@@ -1,0 +1,6 @@
+<!--pages/orientingDrifter/orientingDrifter.wxml-->
+<van-cell-group wx:for="{{content}}"  wx:key="index" custom-class="cellGroup">
+   <van-cell title="{{item.content}}" is-link bindtap="jumpToReply" data-item="{{item}}" size="large" value="回复" label="来自{{item.nickName}}"
+   icon="chat-o">
+   </van-cell>
+</van-cell-group>

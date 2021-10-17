@@ -1,0 +1,67 @@
+<!-- <view class="emo">
+  <view class="nav2" style="background-color:white;border-bottom:1rpx,solid,grey">
+    <view style="display:flex;">
+      <van-icon
+        name="https://636c-cloud1-9gych8ln2673033b-1305508347.tcb.qcloud.la/icon/back.png?sign=7f8fea17348ae0466f062b15ff49d618&t=1622213982"
+        size="60rpx" custom-class="back" bindtap="emoPage_close"></van-icon>
+      <text class="re" style="font-weight:normal;font-size:medium;margin-left:240rpx">心情周报</text>
+    </view>
+  </view> -->
+  <view class="emo">
+  <van-tabs bind:change="tabChange" swipeable>
+
+    <van-tab title="过去七天">
+      <view class="emoPage">
+        <view class="emo-statistics">
+          <van-circle class="emo-rate" value="{{emoRate}}" color="{{emoGradient}}" text="{{emoRateText}}"
+            layer-color="#eeeeee" />
+          <view class="emo-detail">
+            <text class="emo-detail-title">~心情细节~</text>
+            <view wx:for="{{emoDetails}}" class="emo-detail-item" wx:key="index" style="{{item.style}}"></view>
+          </view>
+        </view>
+        <van-divider contentPosition="center"
+          customStyle="color: #1989fa; border-color: #1989fa; font-size: 16px;height:0px">
+          心情比较
+        </van-divider>
+        <view class="emo-compare">
+          <rich-text nodes="您的心情优于{{emoCompare}}%的用户"></rich-text>
+        </view>
+        <view class="emo-tips" wx:for="{{emoTips}}" wx:key="index">
+          <van-divider contentPosition="center"
+            customStyle="color: #1989fa; border-color: #1989fa; font-size: 16px;height:0px;width:100%">
+            Tip{{index+1}}
+          </van-divider>
+          <rich-text nodes="{{item.text}}"></rich-text>
+        </view>
+      </view>
+    </van-tab>
+
+    <van-tab title="过去一月">
+      <view class="emoPage">
+        <view class="emo-statistics">
+          <van-circle class="emo-rate" value="{{emoRate}}" color="{{emoGradient}}" text="{{emoRateText}}"
+            layer-color="#eeeeee" />
+          <view class="emo-detail"><text class="emo-detail-title">心情细节</text>
+            <view wx:for="{{emoDetails}}" class="emo-detail-item" wx:key="index" style="{{item.style}}"></view>
+          </view>
+        </view>
+        <van-divider contentPosition="center"
+          customStyle="color: #1989fa; border-color: #1989fa; font-size: 16px;height:0px">
+          心情比较
+        </van-divider>
+        <view class="emo-compare">
+          <rich-text nodes="您的心情优于{{emoCompare}}%的用户"></rich-text>
+        </view>
+        <view class="emo-tips" wx:for="{{emoTips}}" wx:key="index">
+          <van-divider contentPosition="center"
+            customStyle="color: #1989fa; border-color: #1989fa; font-size: 16px;height:0px;width:100%">
+            Tip{{index+1}}
+          </van-divider>
+          <rich-text nodes="{{item.text}}"></rich-text>
+        </view>
+      </view>
+    </van-tab>
+
+  </van-tabs>
+</view>

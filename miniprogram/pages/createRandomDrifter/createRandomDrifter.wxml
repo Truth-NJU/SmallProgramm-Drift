@@ -1,0 +1,15 @@
+<!--miniprogram/pages/createDrifter.wxml-->
+
+<van-nav-bar title="发布漂流瓶" safe-area-inset-top="false" left-text="取消" right-text="扔" custom-class="nav" border="{{false}}"  bind:click-left="back"
+title-class="title"   bind:click-right="throw">
+</van-nav-bar>
+
+<view class="background">
+  <van-field value="{{ content }}" placeholder="请不要发布违反国家法律相关规定的内容" type="textarea" bind:input="setValue" border="{{false}}"
+    autosize="{{autosize}}">
+    <!-- <image src="{{item}}" wx:for="{{fileIDs}}"></image> -->
+  </van-field>
+  <van-uploader deletable="{{false}}" file-list="{{ fileList }}" bind:after-read="upload">
+  </van-uploader>
+</view>
+

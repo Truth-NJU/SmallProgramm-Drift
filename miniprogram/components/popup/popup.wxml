@@ -1,0 +1,60 @@
+<view class="half-screen">
+  <!--屏幕背景变暗的背景  -->
+  <view class="background_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+  <!--弹出框  -->
+  <view animation="{{animationData}}" class="popup-box" wx:if="{{showModalStatus}}">
+    <!--<image class="popup-background" src="../../images/notepad.png"></image>-->
+    <!--<view class="popup-title">{{title}}</view>
+    <view class="popup-content">
+      <image class="scroll-background" src="../../images/notepad.png" style="height:{{buttonIsNull?47:scrollHeight+4}}vh">
+      </image>
+      <scroll-view class="popup-content-scroll" enable-flex="true" scroll-y="true"
+        style="height:{{buttonIsNull?43:scrollHeight}}vh">
+        <movable-area wx:for="{{contents}}" class="popup-content-line" wx:key="index"
+          style="justify-content:{{lineJust[index%2]}}">
+          <movable-view class="popup-content-item" style="{{lineMargin[index%2]}}{{item.margin}};" x="{{item.left}}"
+            direction="horizontal" out-of-bounds="true" bindchange="itemMove" data-index="{{index}}"
+            disabled="{{!deleteReady}}" bindlongpress="{{!buttonIsNull?'longPress':''}}">
+            <text id="text{{index}}" class="item" wx:if="{{true}}">{{item.text}}</text>
+            <image class="background" data-index="{{index}}"
+              style="width:{{imageWidth[index]}};height:{{imageHeight[index]}}" src="{{image[index]}}"></image>
+          </movable-view>
+        </movable-area>
+      </scroll-view>
+    </view>
+  -->
+    <view class="popup-content-ex">
+      <image class="popup-background-ex" src="../../images/notepad.png" style="height:{{buttonIsNull?60:scrollHeight+13}}vh"></image>
+      <scroll-view class="popup-content-scroll-ex" enable-flex="true" scroll-y="true"
+        style="height:{{buttonIsNull?53:scrollHeight+6}}vh">
+        <movable-area wx:for="{{contents}}" class="popup-content-line" wx:key="index"
+          style="justify-content:{{lineJust[index%2]}}">
+          <movable-view class="popup-content-item" style="{{lineMargin[index%2]}}{{item.margin}};" x="{{item.left}}"
+            direction="horizontal" out-of-bounds="true" bindchange="itemMove" data-index="{{index}}"
+            disabled="{{!deleteReady}}" bindlongpress="{{!buttonIsNull?'longPress':''}}">
+            <text id="text{{index}}" class="item" wx:if="{{true}}">{{item.text}}</text>
+            <image class="background" data-index="{{index}}"
+              style="width:{{imageWidth[index]}};height:{{imageHeight[index]}}" src="{{image[index]}}"></image>
+          </movable-view>
+        </movable-area>
+      </scroll-view>
+    </view>
+
+    <!--<view wx:if="{{!buttonIsNull}}" class="input" style="height: {{leftHeight}}vh;">
+      <van-field input-class="popup-input" type="textarea" autosize="{{fieldMaxHeight}}" model:value="{{text}}"
+        custom-style="{{fieldStyle}}" bind:linechange="linechange">
+        <button slot="button" wx:for="{{buttons}}" wx:key="index" id="{{item.id}}" class="popup-button"
+          hover-class="popup-button-hover" style="width: max-content" bindtap="onButton">{{item.name}}</button>
+      </van-field>
+    </view>-->
+    <view wx:if="{{!buttonIsNull}}" class="input-ex" style="height: {{leftHeight}}vh;">
+      <van-field type="textarea" autosize="{{fieldMaxHeight}}" model:value="{{text}}" placeholder="记录每时每刻的心情.."
+        custom-style="border-radius: 4vh 4vh 4vh 4vh/ 4vh 4vh 4vh 4vh;bottom: 1.5vh;position: fixed;left: 3.6vw;margin-right: 1.1vw;width: 76.3vw;border:thin solid #1296db;padding-top:1vh;padding-bottom:1vh;"
+        bind:linechange="linechange" input-class="popup-input-ex">
+      </van-field>
+      <button wx:for="{{buttons}}" wx:key="index" id="{{item.id}}" class="popup-button-ex"
+        hover-class="popup-button-hover" bindtap="onButton">{{item.name}}</button>
+    </view>
+    <view wx:if="{{!buttonIsNull}}" class="empty" style="height: {{leftHeight}}vh;"></view>
+  </view>
+</view>

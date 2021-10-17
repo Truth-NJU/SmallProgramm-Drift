@@ -1,0 +1,118 @@
+/* pages/replyRandomDrifter/replyRandomDrifter.wxss */
+page {
+  background-color: #f1f1f1;
+}
+
+.replyText {
+  position: relative;
+  font-size: 36rpx;
+  color: #444;
+  line-height: 5vw;
+  padding: 2vw 2.5vw;
+  background-color: #96EB6A;
+   margin-right: -1.6vw;
+  border-radius: 20rpx;
+  display: flex; 
+  justify-content: flex-end;
+  float: right;
+  margin-top:20rpx ;
+  word-break: break-all; 
+
+}
+
+.arrow {
+  position: relative;
+  float:right;
+  margin-top:20rpx ;
+  /* right: 0px; */
+  /* 圆角的位置需要细心调试哦 */
+  width: 0;
+  height: 0;
+  font-size: 0;
+  border: solid 14px;
+  border-color: #f1f1f1 #f1f1f1 #f1f1f1 #96EB6A;
+}
+
+/* .background{
+  
+} */
+
+.content {
+  font-size: 36rpx;
+  color: #444;
+  line-height: 5vw;
+  padding: 2vw 2.5vw;
+  background-color: white;
+  margin-right: -1.6vw;
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: flex-end;
+  float: left;
+  margin-top: 20rpx;
+}
+
+.arrowContent {
+  position: relative;
+  float:left;
+  margin-top:25rpx ;
+  /* right: 0px; */
+  /* 圆角的位置需要细心调试哦 */
+  width: 0;
+  height: 0;
+  font-size: 0;
+  border: solid 10px;
+  border-color: #f1f1f1 white  #f1f1f1 #f1f1f1 ;
+}
+
+.img {
+  position: relative;
+  border-radius: 8px;
+  background-color: white;
+  /* margin-right: -1.6vw; */
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: flex-end;
+  float: left;
+  margin-top: 30rpx;
+  padding:10rpx;
+  width:300rpx;
+}
+
+.arrowImg {
+  position: relative;
+  float:left;
+  margin-top:30rpx ;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  border: solid 12px;
+  border-color: #f1f1f1 white  #f1f1f1 #f1f1f1 ;
+}
+
+.input {
+  position: fixed;
+  bottom: 0;
+  border-radius: 10rpx;
+  border:thin solid #f1f1f1;
+  padding-top:95rpx;
+  padding-bottom:20rpx;
+  padding-right:400rpx;
+  padding-left:400rpx;
+  opacity: 1 ;
+}
+
+.button {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  writing-mode: vertical-lr;
+  width: 12% !important;
+  margin-right: 5%;
+  position: fixed;
+  bottom: 2%;
+  left: 82%;
+  height: 6%;
+  border-radius: 50%;
+  background-color:#00CAFC;
+  color: #FFFFFF;
+}

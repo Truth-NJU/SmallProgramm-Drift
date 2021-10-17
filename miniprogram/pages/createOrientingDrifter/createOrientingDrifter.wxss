@@ -1,0 +1,30 @@
+/* miniprogram/pages/createDrifter.wxss */
+
+.uploadImg{
+  left:0%;
+ position: fixed;
+ width: 100%;
+   display: flex;
+   justify-content: center; 
+}
+.button{
+  left:0%;
+ position: fixed;
+ width: 100%;
+   display: flex;
+   justify-content: center; 
+}
+
+.nav{
+  position: relative !important;
+  top:0rpx !important;
+}
+.title{
+  position: relative !important;
+  bottom:40rpx !important;
+}
+.background{
+  background-color:white;
+  position: relative;
+  top:0rpx;
+}

@@ -1,0 +1,253 @@
+/* miniprogram/pages/center/center.wxss */
+@import "../../colorui/animation.wxss";
+
+page {
+  background-color: whitesmoke;
+}
+
+.people {
+  background: linear-gradient(skyblue, honeydew);
+  margin-bottom: 50rpx;
+}
+
+.back {
+  background-color: white;
+  margin-bottom: 50rpx;
+  width: 700rpx;
+  border-radius: 10rpx;
+}
+
+.avatar {
+  overflow: hidden;
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  border: 2rpx solid #fff;
+  box-shadow: 3rpx 3rpx 10rpx rgba(0, 0, 0, 0.2);
+}
+
+.name {
+  margin: 20rpx;
+  font-weight: bold;
+  font-size: 60rpx;
+}
+
+.identity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20%;
+  height: 40rpx;
+  margin: 20rpx;
+  margin-top: 10rpx;
+  background-color: grey;
+  font-size: 20rpx;
+}
+
+.show {
+  display: flex;
+  justify-content: center;
+}
+
+.num {
+  display: flex;
+  justify-content: center;
+}
+
+.show_out {
+  display: flex;
+  justify-content: center;
+  width: 375rpx;
+}
+
+.show_in {
+  width: fit-content;
+}
+
+.img {
+  width: 90rpx !important;
+  height: 90rpx !important;
+}
+
+.manager_out {
+  padding: 10rpx;
+  display: flex;
+  align-items: center;
+  width: 350rpx;
+}
+
+.manager_text {
+  margin-top: 5rpx;
+  font-size: small;
+  font-weight: 300;
+}
+
+.top {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  transform: rotate(0deg) scale(1) translate(-100%, 0%);
+  -webkit-transform: rotate(0deg) scale(1) translate(-100%, 0%);
+  transition: all 0.4s ease;
+  z-index: 998;
+}
+
+.top_show {
+  transform: rotate(0deg) scale(1) translate(0%, 0%);
+  -webkit-transform: rotate(0deg) scale(1) translate(0%, 0%);
+}
+
+.back-button {
+  display: flex;
+  justify-content: center;
+  background-color: grey;
+  width: 100rpx;
+}
+
+.re {
+  display: flex;
+  justify-content: center;
+  line-height: 60rpx;
+  align-content: center;
+  width: 150rpx;
+  border-radius: 20rpx;
+  position: relative;
+  bottom: 0;
+}
+.on{
+  box-shadow: 3rpx 3rpx 10rpx rgba(0, 0, 0, 0.2);
+  
+  border: 1rpx solid #fff;
+  background: linear-gradient(#1cbbb4, #0081ff);
+}
+.nav{
+  padding: 10rpx;
+  background-color: skyblue;
+  height: fit-content;
+  opacity: 0.9;
+  border-bottom: thin solid whitesmoke;
+}
+
+.nav2{
+  padding: 10rpx;
+  background-color: skyblue;
+  height: 100rpx;
+  opacity: 0.9;
+  border-bottom: thin solid whitesmoke;
+}
+
+.back{
+  position:relative !important; 
+  left:0rpx !important;
+}
+
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.test {
+  display: flex;
+  justify-content: center;
+}
+
+.black_back {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.manager_content {
+  border-radius: 10rpx;
+  width: 600rpx;
+  height: 300rpx;
+  background-color: ivory;
+  z-index: 2000;
+}
+
+.get_code_content {
+  border-radius: 10rpx;
+  width: 600rpx;
+  height: 350rpx;
+  background-color: ivory;
+  z-index: 2000;
+}
+
+.manager_get_code_content {
+  border-radius: 10rpx;
+  width: 600rpx;
+  height: 300rpx;
+  background-color: ivory;
+  z-index: 2000;
+}
+.advice_content{
+  border-radius: 10rpx;
+  width: 600rpx;
+  height: 200rpx;
+  background-color: ivory;
+  z-index: 2000;
+}
+.out{
+  padding: 10rpx;
+  position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: auto;
+	margin-right: auto;
+	width: fit-content;
+	height: fit-content;
+	max-width: 100%;
+	background-color: #f8f8f8;
+	border-radius: 10rpx;
+	overflow: hidden;
+}
+.right{
+  display: flex;
+  justify-content: flex-end;
+}
+input{
+  margin-top: 10rpx;
+  background-color: white;
+  width: 550rpx;
+  border: 2rpx solid black;
+  border-radius: 10rpx;
+}
+
+.swiper {
+  position: relative;
+  height: 100%
+}
+
+.show_details {
+  border-bottom: 2rpx solid whitesmoke;
+}
+
+.show_top {
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+}
+
+.show_bot {
+  border-bottom-left-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+}
+
+.title_left{
+  margin-left: 10rpx;
+}

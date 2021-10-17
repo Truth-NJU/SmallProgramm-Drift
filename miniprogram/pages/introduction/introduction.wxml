@@ -1,0 +1,38 @@
+<!--pages/introduction/introduction.wxml-->
+
+<!-- <view>手帐使用说明</view>
+<image src="../../images/introduction1.jpg" mode="widthFix" style="width:500rpx;"></image>
+<image src="../../images/introduction2.jpg" mode="widthFix" style="width:500rpx;"></image>
+
+<view style='width: 100%; height: 150rpx;'></view>
+
+<view>漂流瓶使用说明</view>
+<image src="../../images/introduction3.jpg" mode="widthFix"style="width:500rpx;"></image>
+
+<view style='width: 100%; height: 150rpx;'></view>
+
+<view>个人中心使用说明</view>
+<image src="../../images/introduction4.jpg" mode="widthFix" style="width:500rpx;"></image> -->
+
+
+
+
+<van-tabs active="{{ active }}" animated  swipeable>
+  <van-tab title="手帐使用指南">
+    <image src="https://636c-cloud1-9gych8ln2673033b-1305508347.tcb.qcloud.la/images/introduction1.jpg?sign=6316afc5c2515c2953195e0136a81479&t=1622380647" mode="widthFix" class="img"></image>
+    <view style='width: 100%; height: 150rpx;'></view>
+  <image src="https://636c-cloud1-9gych8ln2673033b-1305508347.tcb.qcloud.la/images/introduction2.jpg?sign=076481cb3afa17b6e1797add299d514d&t=1622389578" mode="widthFix" class="img"></image>
+  </van-tab>
+  <van-tab title="漂流瓶使用指南">
+    <image src="https://636c-cloud1-9gych8ln2673033b-1305508347.tcb.qcloud.la/images/introduction3.jpg?sign=a25b362c123b7cc60426e3729238535a&t=1622380668" mode="widthFix" class="img"></image>
+  </van-tab>
+  <van-tab title="个人中心使用指南">
+    <image src="https://636c-cloud1-9gych8ln2673033b-1305508347.tcb.qcloud.la/images/introduction4.jpg?sign=1da57e921021c9fa29f74ea081e38b56&t=1622380678" mode="widthFix" class="img"></image>
+
+
+    <view style='width: 100%; height: 150rpx;'></view>
+
+    
+    <image src="https://636c-cloud1-9gych8ln2673033b-1305508347.tcb.qcloud.la/images/introduction5.jpg?sign=26bfe21fdc4916d44d91de3fe5aa4f29&t=1622388679" mode="widthFix" class="img"></image>
+  </van-tab>
+</van-tabs>

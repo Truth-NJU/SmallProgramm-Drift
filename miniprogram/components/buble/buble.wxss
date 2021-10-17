@@ -1,0 +1,49 @@
+/* components/buble/buble.wxss */
+/* miniprogram/pages/testComponents/buble/buble.wxss */
+
+.circle {
+  border-radius: 100%;
+  position: absolute;
+  top: 67.5rpx;
+  left: 120rpx;
+  opacity: 1;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.pic_main {
+  position: absolute;
+  right:0rpx;
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.pic_buble{
+  position: absolute;
+  left: 0;
+  width: 75rpx;
+  height: 75rpx;
+  opacity: 1;
+}
+
+.bubles{
+  border-radius: 50%;
+  position: absolute;
+  background-color: #c4d0d0;
+  opacity: 0.7;
+  top: 80rpx;
+  left: 120rpx;
+  z-index: -1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  font-size: 35rpx;
+  padding: 0;
+  height:75rpx!important;
+  width:75rpx!important;
+  line-height: 75rpx;
+
+}
+
+.hover {
+  opacity: 0.9;
+  background: #c4d0d0;
+}

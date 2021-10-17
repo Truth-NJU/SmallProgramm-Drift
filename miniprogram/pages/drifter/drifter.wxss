@@ -1,0 +1,124 @@
+/* pages/drifter/drifter.wxss */
+/* Page{} */
+
+/* Page{
+  background-repeat:no-repeat;
+   background-size:100% 100%;
+   -moz-background-size:100% 100%;
+   opacity:0.55;
+  background-image: url("https://636c-cloud1-9gych8ln2673033b-1305508347.tcb.qcloud.la/IMG_4371.JPG?sign=006e6478bd63d7d318ab052687c26449&t=1620823575");
+} */
+.body{
+  background-color: #AED6F1   !important;
+}
+.re {
+  display: flex;
+  justify-content: center;
+  line-height: 60rpx;
+  align-content: center;
+  width: 150rpx;
+  border-radius: 20rpx;
+  position: relative;
+  bottom: 0;
+}
+.nav{
+  padding: 10rpx;
+  background-color: skyblue;
+  height: fit-content;
+  opacity: 0.9;
+  border-bottom: thin solid whitesmoke;
+}
+
+.title{
+  position: relative !important;
+  bottom: 60rpx !important;
+}
+
+.cellGroup{
+  top:0rpx !important;
+}
+.button{
+   left: 0%;
+   position: fixed;
+    bottom: 0;
+   width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: center; 
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.block {
+  width: 120px;
+  height: 120px;
+  background-color: #fff;
+}
+
+.dalao{
+  left: 85%;
+  position: fixed;
+   bottom: 0;
+  width: 100%;
+   z-index: 100;
+   display: flex;
+   justify-content: center; 
+}
+
+.card {
+  border: 2rpx solid #ffffff;
+  border-radius: 5rpx;    
+  background-color: #ffffff;
+  box-shadow: 4rpx 1rpx 1rpx #cccccc;
+  margin: 8rpx;
+  position: relative;
+}
+
+.img{
+  flex-direction:row;
+  display:flex;
+  max-width: 100%;
+  height: auto;
+  float: left; 
+}
+
+.info{
+  color: #666;
+  flex: 1;
+	font-size: 28rpx;
+  line-height: 1.8;
+  height: 60rpx;
+  font-size: 26rpx;
+  text-align: center;
+}
+
+.chat{
+  position: fixed!important;
+  left:85% !important;
+  bottom:0 !important;
+}
+
+.drift-popup{
+  position: fixed;
+  height: 40vh;
+}
+
+.overlay{
+  position: relative;
+  text-align:center;
+  /* font-size:50rpx; */
+}
+
+.card{
+  background-color:white;
+   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 400rpx;
+    border-radius: 10rpx;
+    position: relative;
+    left:23%
+}

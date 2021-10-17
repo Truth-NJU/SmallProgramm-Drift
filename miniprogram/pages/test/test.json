@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "buble":"../../components/buble/buble",
+    "van-field": "@vant/weapp/field/index"
+  }
+}

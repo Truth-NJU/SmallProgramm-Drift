@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/diary/diary",
+    "pages/drifter/drifter",
+    "pages/testComponents/popup/popup",
+    "pages/testComponents/buble/buble",
+    "pages/test/test",
+    "pages/createOrientingDrifter/createOrientingDrifter",
+    "pages/createRandomDrifter/createRandomDrifter",
+    "pages/center/center",
+    "pages/replyRandomDrifter/replyRandomDrifter",
+    "pages/replyOrientingDrifter/replyOrientingDrifter",
+    "pages/replyDrifter/replyDrifter",
+    "pages/reply/reply",
+    "pages/orientingDrifter/orientingDrifter",
+    "pages/newDrifter/newDrifter",
+    "pages/emoWeek/emoWeek",
+    "pages/introduction/introduction"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "收到的回复",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "networkTimeout": {
+    "request": 1000000,
+    "connectSocket": 100000,
+    "uploadFile": 100000,
+    "downloadFile": 100000
+  },
+  "style": "v2",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/diary/diary",
+        "text": "手帐",
+        "iconPath": "images/shouzhang.png",
+        "selectedIconPath": "images/shouzhang.png"
+      },
+      {
+        "pagePath": "pages/newDrifter/newDrifter",
+        "text": "漂流瓶",
+        "iconPath": "images/piaoliu.png",
+        "selectedIconPath": "images/piaoliu.png"
+      },
+      {
+        "pagePath": "pages/center/center",
+        "text": "个人中心",
+        "iconPath": "images/80gerenzhongxin.png",
+        "selectedIconPath": "images/80gerenzhongxin.png"
+      }
+    ]
+  }
+}

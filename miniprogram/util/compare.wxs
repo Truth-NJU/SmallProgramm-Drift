@@ -1,0 +1,21 @@
+var compare={
+  min:function(a,b){
+    if (a>b)return b;else return a;
+  },
+  len:function(a){
+    count=0;
+    for (i=0;i<a.length;i++ ){
+      if (a[i]>='a'&&a[i]<='z'||a[i]>='A'&&a[i]<='Z'){
+        count=count+1.2;
+      }else{
+        count=count+2;
+      }
+    }
+    return count;
+  }
+}
+
+module.exports={
+  min: compare.min,
+  len: compare.len,
+}

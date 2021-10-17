@@ -1,0 +1,2 @@
+<button bindtap="changeRange">请点击</button>
+<popup id='popup' title='我是?' contents="{{contents}}"></popup>

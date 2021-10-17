@@ -1,0 +1,15 @@
+<!--components/buble/buble.wxml-->
+<view>
+  <button class="circle" size="mini" style="height:100rpx;width:100rpx;" bindtap="go">
+    <view >
+      <image class="pic_main" src="../../images/jia.png" bindtap="jia" animation="{{rotate}}"></image>
+    </view>
+  </button>
+  <view wx:for="{{bubles}}" wx:key="index">
+    <button class="bubles" hover-class="hover" hover-stay-time="50" style="{{item.style}}"
+      animation="{{animation[index]}}" data-index="{{index}}" bindtap="bubleClick">
+      {{item.text}}
+      <image class="pic_buble" src="{{item.image}}" style="{{item.imgStyle}}"></image>
+    </button>
+  </view>
+</view>

@@ -1,0 +1,115 @@
+/* pages/newDrifter/newDrifter.wxss */
+Page{
+  background :linear-gradient(#85C1E9  ,#FEF9E7);
+}
+
+/* .root{
+  overflow-x:hidden;
+  z-index: 100;
+}  */
+.img{
+  width:250rpx;
+  position: absolute;
+  bottom: 0rpx;
+  float: left;
+  opacity:1;
+}
+
+.dalao{
+  position:absolute !important; 
+  left:27% !important;
+
+  bottom:1% !important;
+  z-index: 100;
+}
+
+.create{
+  position:absolute !important; 
+  left:18% !important;
+
+  bottom:11% !important;
+  z-index: 100;
+}
+
+.image{
+  width:60%;
+  position: relative;
+  left:5%;
+  top:50rpx;
+  border-radius:50rpx;
+
+}
+
+.reply{
+  position: absolute;
+  width:10%;
+  left:20rpx;
+  bottom:190rpx;
+  z-index: 100;
+}
+
+.ren{
+  position: absolute;
+  width:150rpx;
+  right:10rpx;
+  bottom:10rpx;
+}
+
+.mail{
+  position: absolute;
+  width:25%;
+  left:75%;
+  bottom:10rpx;
+}
+
+.card {
+  background-color:white;
+   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 400rpx;
+    border-radius: 10rpx;
+    position: relative;
+    left:23%
+}
+
+.overlay{
+  position: relative;
+  text-align:center;
+  /* font-size:50rpx; */
+}
+
+.bang{
+  position: absolute;
+  bottom:100rpx;
+  right: 0rpx;
+  width:310rpx;
+  height:200rpx;
+  z-index: 10;
+}
+
+.textfield{
+  position: relative;
+  right:-80rpx;
+  width: 200rpx;
+  bottom: 30rpx;
+  height:120rpx;
+  z-index: 15;
+}
+
+.qi{
+width:310 rpx;
+position: absolute;
+right:-20rpx;
+bottom: -10rpx;
+z-index: 10;
+}
+
+/* .border{
+  background-color:white;
+   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 400rpx;
+    border-radius: 10rpx;
+    position: relative;
+    left:23%
+}  */

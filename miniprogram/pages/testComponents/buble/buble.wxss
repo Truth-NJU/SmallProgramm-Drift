@@ -1,0 +1,35 @@
+/* miniprogram/pages/testComponents/buble/buble.wxss */
+view{
+  font-size: 20rpx;
+}
+.circle{
+  border-radius: 50%;
+  position: absolute;
+  top: 67.5rpx;
+  left: 90rpx;
+}
+.circle image{
+  position: absolute;
+  left: 0;
+  width: 100rpx;
+  height: 100rpx;
+}
+.one{
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  left: 20rpx;
+}
+.two{
+  border-radius: 50%;
+  background-color: yellow;
+  position: absolute;
+  top: 80rpx;
+}
+.three{
+  border-radius: 50%;
+  background-color: blue;
+  position: absolute;
+  top: 160rpx;
+  left: 20rpx;
+}
